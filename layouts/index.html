@@ -2,9 +2,9 @@
 {{ partial "profile.html" . }}
 
 <div id="list-page">
-    {{ $pages := .Site.RegularPages }}
+    {{ $pages := .Site.RegularPages}}
     {{ $paginator := .Paginate ($pages) }}
-    {{ range $paginator.Pages }}
+    {{ range where $paginator.Pages "Section" "posts" }}
         {{ $title := .Title }}
         {{ $summary := .Summary }}
         {{ $date := dateFormat "Jan 2, 2006" .Date }}
