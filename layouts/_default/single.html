@@ -5,23 +5,19 @@
 
     <div class="tip">
         <span>
+          خواندن {{ .ReadingTime }} دقیقه
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          {{ .WordCount }} کلمه
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
           {{ .Date.Format "Jan 2, 2006 15:04" }}
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          {{ if lt 1 .WordCount }}
-            {{ .WordCount }} words
-          {{ else }}
-              {{ .WordCount }} word
-          {{ end }}
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          {{ .ReadingTime }} minute read
         </span>
     </div>
 
