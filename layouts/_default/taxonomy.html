@@ -2,23 +2,15 @@
 {{ partial "profile.html" . }}
 
 <section id="archive">
-   
-    {{ range .Data.Pages.GroupByDate "2006" }}
-        <div class="group">
-            <h3 class="key">
-                {{ .Key }}
-            </h3>
 
+        <div class="group">
+            <h3>نوشته‌های مربوط به  <b>{{ .Title }}</b></h3>
             {{ range .Pages }}
                 <div class="value">
-                  <div class="date">
-                      {{ .Date.Format "Jan 2" }}
-                  </div>
-                  <div class="title">
+                  <div class="title">      
                       <a href="{{ .Permalink }}">
-                          {{ .Title }}
-                      </a>
-
+                        {{ .Title }}
+                      </a>      
                       {{ with .Params.tags }}
                           <div class="tags">
                               {{ range . }}
@@ -30,8 +22,6 @@
                 </div>
             {{ end }}          
         </div>
-
-    {{ end }}
 
 
 

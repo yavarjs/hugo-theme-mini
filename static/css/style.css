@@ -400,6 +400,7 @@ nav.navigation a.button {
 }
 #archive .group .value .title a {
   color:#404040;
+  float: right;
 }
 #archive .group .value .title a:hover {
   color: #0366d6;
