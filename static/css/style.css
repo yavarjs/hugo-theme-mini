@@ -277,7 +277,7 @@ nav.navigation a.button {
 
 #list-page .date {
   width: 20%;
-  float: right;
+  float: left;
   text-align: right;
   position: relative;
   top: 1px;
@@ -492,7 +492,7 @@ nav.navigation a.button {
 
 #page-404 .date {
   width: 20%;
-  float: right;
+  float: left;
   text-align: right;
   position: relative;
   top: 1px;
