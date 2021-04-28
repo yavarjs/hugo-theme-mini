@@ -9,6 +9,9 @@
 {{ else }}
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 {{ end }}
+{{if .IsPage}}
+<meta name="author" content="{{ .Params.author }}">
+{{ end }}
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v28.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
 
