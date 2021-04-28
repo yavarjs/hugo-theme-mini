@@ -102,6 +102,7 @@ h4:hover a {
 }
 
 .highlight {
+  direction: ltr;
   max-width: 100%;
   overflow-x: auto;
 }
