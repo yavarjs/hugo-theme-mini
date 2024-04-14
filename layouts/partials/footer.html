@@ -3,7 +3,7 @@
         {{ partial "social.html" . }}
     {{ end }}
 
-    <p class="copyright">
+    <div class="copyright">
     {{ with .Site.Params.copyright }}
         {{ . | markdownify }}
     {{ else }}
@@ -19,3 +19,13 @@
         قدرت‌گرفته از <a href="http://www.gohugo.io/">Hugo</a> با تم <a href="https://github.com/yavarjs/hugo-theme-mini">mini</a>
     </p>
 </footer>
+
+{{ range .Site.Params.customJS }}
+    {{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}
+        <!-- remote js -->
+        <script src="{{ . }}"></script>
+    {{ else }}
+        <!-- local js -->
+        <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+    {{ end }}
+{{ end }}

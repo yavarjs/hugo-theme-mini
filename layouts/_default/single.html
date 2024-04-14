@@ -4,6 +4,10 @@
     <h1 class="title">{{ .Title }}</h1>
 
     <div class="tip">
+        <time datetime="{{ .PublishDate }}">{{ i18n "publishDateFull" . }}</time>
+        <span class="split">
+          ·
+        </span>
         <span>
           {{ .Params.author }}
         </span>
@@ -27,8 +31,14 @@
         </span>
     </div>
 
+    
+    {{ if or .Site.Params.showToc .Params.showToc }}
+        {{ partial "toc.html" . }}
+    {{ end }}
+
+
     <div class="content">
-      {{  .Content }}
+      {{ .Content }}
     </div>
 
     {{ with .Params.tags }}
